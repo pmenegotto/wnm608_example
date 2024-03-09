@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --white : #f8f7f1;
+    --light-blue : #84dbda;
+    --dark-blue : #2ea3f2;
+    --black : #000000;
+    --yellow : #ffeb4d;
+    --orange : #f39900;
+    --gray: #333333;
+    --pink : #ffccff;
+    --magenta : #cc33cc;
+}
+
+@font-face {
+    font-family: 'Kaoly';
+    src: url('../fonts/Kaoly Demo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Abril Regular';
+    src: url('../fonts/Abril_Text_Regular.otf');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Abril Regular';
+}
+
+h1 {
+    font-size: 60pt;
+    font-family: 'Kaoly';
+}
+
+h2 {
+    font-size: 45pt;
+}
+
+h3 {
+    font-size: 35pt;
+}
+
+h4 {
+    font-size: 25pt
+}
+
+p {
+    font-size: 14pt;
+    padding: 5% 10%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header__div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header__div__title {
+    font-family: 'Kaoly';
+    font-size: 60pt;
+}
+
+.header__div__subtitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35pt;
+}
+
+.color_palette {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 30% 10%;
+}
+
+.section_title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24pt;
+}
+
+.color_palette__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.color_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 5%;
+    margin: 1%;
+}
+
+.color1 {
+    background-color: var(--white);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.color2 {
+    background-color: var(--light-blue);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.color3 {
+    background-color: var(--dark-blue);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.color4 {
+    background-color: var(--gray);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.color5 {
+    background-color: var(--yellow);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.color6 {
+    background-color: var(--orange);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.color7 {
+    background-color: var(--black);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.color8 {
+    background-color: var(--pink);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.color9 {
+    background-color: var(--magenta);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.fonts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 30% 10%;
+
+}
+
+.divisor {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 75%;
+}
+
+.kaoly {
+    font-family: 'Kaoly', Arial, Helvetica, sans-serif;
+    padding: 1%;
+    font-size: 24pt;
+}
+
+.abril {
+    font-family: 'Abril Fatface', Arial, Helvetica, sans-serif;
+    padding: 1%;
+    font-size: 24pt;
+}
+
+.aril_bold {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1%;
+    font-size: 24pt;
+}
+
+.abril_regular {
+    font-family: 'Abril Regular';
+    padding: 1%;
+    font-size: 24pt;
+}
+
+.font-size {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 30% 10%;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 30% 10%;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 30% 10%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #000000;
+    border-radius: 35px;
+    padding: 0 10% 5%;
+    margin: 5% 0%;
+}
+
+.contact__title {
+    color: var(--white);
+    padding: 5%;
+}
+
+.contact__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__form__input-text {
+    background-color: #000000;
+    border: 3px solid var(--white);
+    padding: 3%;
+    font-size: 1rem;
+    color: var(--white);
+    border-radius: 10px;
+    margin: 2%;
+    width: 100%;
+}
+
+.contact__form__input-text::placeholder {
+    color: var(--white);
+}
+
+.contact__form__input-submit {
+    background-color: var(--yellow);
+    color: var(--orange);
+    border: 0;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 3%;
+    cursor: pointer;
+    width: 20%;
+    align-self: flex-end;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--light-blue);
+    border-radius: 35px;
+    padding: 0 10% 5%;
+    margin: 5% 0%;
+}
+
+.newsletter__title {
+    color: var(--black);
+    padding: 5%;
+}
+
+.newsletter__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter__form__input-text {
+    background-color: var(--light-blue);
+    border: 0;
+    border-bottom: 2px solid var(--white);
+    padding: 3%;
+    font-size: 1rem;
+    color: var(--white);
+    margin: 2%;
+    width: 100%;
+}
+
+.newsletter__form__input-text:focus {
+    outline: 0;
+}
+
+.newsletter__form__input-text::placeholder {
+    color: var(--white);
+}
+
+.newsletter__form__checkbox {
+    margin: 2% 0%;
+    align-self: flex-start;
+}
+
+.newsletter__form__checkbox__label-checkbox {
+    color: var(--white);
+    font-size: 1rem;
+    font-family: 'Abril Regular';
+}
+
+.newsletter__form__input-submit {
+    background-color: var(--black);
+    color: var(--white);
+    border: 0;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 3%;
+    cursor: pointer;
+    width: 20%;
+    align-self: flex-end;
+}
+
+.joinourteam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 35px;
+    padding: 0 10% 5%;
+    margin: 5% 0%;
+}
+
+.joinourteam__title {
+    color: var(--black);
+    padding: 5%;
+}
+
+.joinourteam__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.joinourteam__form__input-text {
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    padding: 3%;
+    font-size: 1rem;
+    color: var(--black);
+    margin: 2%;
+    width: 100%;
+}
+
+.joinourteam__form__input-text:focus {
+    outline: 0;
+}
+
+.joinourteam__form__input-text::placeholder {
+    color: var(--black);
+}
+
+.joinourteam__form__radio {
+    display: flex;
+    flex-direction: column;
+    margin: 2% 0%;
+    align-self: flex-start;
+}
+
+.joinourteam__form__radio__label-radio {
+    color: var(--black);
+    font-size: 1rem;
+    font-family: 'Abril Regular';
+}
+
+.joinourteam__form__input-submit {
+    background-color: var(--black);
+    color: var(--white);
+    border: 0;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 3%;
+    cursor: pointer;
+    width: 20%;
+    align-self: flex-end;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 35px;
+    padding: 0 10% 5%;
+    margin: 5% 0%;
+}
+
+.search__title {
+    color: var(--black);
+    padding: 5%;
+}
+
+.search__form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search__form__input {
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    padding: 3%;
+    font-size: 1rem;
+    color: var(--black);
+    margin: 2%;
+    width: 100%;
+}
+
+.search__form__button {
+    background-color: var(--black);
+    color: var(--white);
+    border: 0;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 3%;
+    cursor: pointer;
+    width: 20%;
+}
