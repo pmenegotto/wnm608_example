@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
+    /* Defines root (global) CSS custom properties (variables) for color values */
     --white : #f8f7f1;
     --light-blue : #84dbda;
     --dark-blue : #2ea3f2;
@@ -455,4 +456,20 @@ p {
     padding: 3%;
     cursor: pointer;
     width: 20%;
+}
+
+input[list="options"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid var(--gray); 
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+input[list="options"]:focus {
+    border-color: var(--dark-blue);
+    outline: none;
 }
