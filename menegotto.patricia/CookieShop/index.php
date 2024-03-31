@@ -10,12 +10,12 @@
     <?php include 'parts/navbar.php'; ?>
 
     <main>
-        <section class="section1">
+        <section>
             <div class="section1__content">
                 <h1>Lorem ipsum dolor sit amet</h1>
                 <div class="section1__content__search">
                     <input type="search" id="search" name="search">
-                    <button>Search</button>
+                    <button class="btn section1__content__search__button">Search</button>
                 </div>
             </div>
         </section>

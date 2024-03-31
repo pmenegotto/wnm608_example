@@ -11,79 +11,20 @@
 
     <main>
         <section class="section2">
-            <div class="section2__card card">
-                <img src="./img/image.png" alt="">
-                <div class="section2__card__text">
-                    <h4>Lorem ipsum</h4>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
-                </div>
-                <button class="card-button">View More</button>            
-                </div>
+            <?php for( $i = 0; $i < 8; $i++){
+                echo '
                 <div class="section2__card card">
-                <img src="./img/image.png" alt="">
-                <div class="section2__card__text">
-                    <h4>Lorem ipsum</h4>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
-                </div>
-                <button class="card-button">View More</button>            
-            </div>
-            <div class="section2__card card">
-                <img src="./img/image.png" alt="">
-                <div class="section2__card__text">
-                    <h4>Lorem ipsum</h4>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
-                </div>
-                <button class="card-button">View More</button>            
-            </div>
-            <div class="section2__card card">
-                <img src="./img/image.png" alt="">
-                <div class="section2__card__text">
-                    <h4>Lorem ipsum</h4>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
-                </div>
-                <button class="card-button">View More</button>            
-            </div>
-            <div class="section2__card card">
-                <img src="./img/image.png" alt="">
-                <div class="section2__card__text">
-                    <h4>Lorem ipsum</h4>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
-                </div>
-                <button class="card-button">View More</button>            
-                </div>
-                <div class="section2__card card">
-                <img src="./img/image.png" alt="">
-                <div class="section2__card__text">
-                    <h4>Lorem ipsum</h4>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
-                </div>
-                <button class="card-button">View More</button>            
-            </div>
-            <div class="section2__card card">
-                <img src="./img/image.png" alt="">
-                <div class="section2__card__text">
-                    <h4>Lorem ipsum</h4>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
-                </div>
-                <button class="card-button">View More</button>            
-            </div>
-            <div class="section2__card card">
-                <img src="./img/image.png" alt="">
-                <div class="section2__card__text">
-                    <h4>Lorem ipsum</h4>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
-                </div>
-                <button class="card-button">View More</button>            
-            </div>
-            <button class="section-button">View More</button>
+                    <img src="./img/image.png" alt="Product Image">
+                    <div class="section2__card__text">
+                        <h4>Lorem ipsum</h4>
+                        <br>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
+                    </div>
+                    <a class="btn" href="product-page.php">View More</a>
+                </div>';
+            } ?>
+            
+            <button class="btn">View More</button>
         </section>
     </main>
 
