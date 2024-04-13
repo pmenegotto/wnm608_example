@@ -20,7 +20,7 @@
                         <br>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
                     </div>
-                    <a class="btn" href="product-page.php">View More</a>
+                    <a class="btn" href="product-page.php?id='. $i . '">View More</a>
                 </div>';
             } ?>
             

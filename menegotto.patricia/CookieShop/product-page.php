@@ -1,3 +1,7 @@
+<?php
+$id = $_GET['id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +24,7 @@
                 </div>
             </div>
             <div class="cart-section__text">
-                <h3>Lorem ipsum dolor</h3>
+                <h3>Lorem ipsum dolor <?php echo $id ?></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dolore quam, ipsa tenetur placeat non expedita ex cum nisi! Ratione odit placeat rerum earum similique repudiandae architecto corrupti. Rem, nobis?</p>
                 <button class="btn">Add to cart</button>
             </div>
