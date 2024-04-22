@@ -30,7 +30,7 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color: var(--white);
     font-family: 'Abril Regular', Arial, Helvetica, sans-serif;
 }
 
@@ -72,7 +72,10 @@ a {
 
 header {
     width: 100%;
-    background-color: gray;
+}
+
+nav {
+    width: 100%;
 }
 
 footer {
@@ -87,12 +90,82 @@ section {
     padding: 5%;
     display: flex;
     justify-content: center;
-    background-color: var(--white);
     border-radius: 50px;
+}
+
+.bg-white { background-color: var(--white); }
+.bg-light-blue { background-color: var(--light-blue); }
+.bg-dark-blue { background-color: var(--dark-blue); }
+.bg-black { background-color: var(--black); }
+.bg-yellow { background-color: var(--yellow); }
+.bg-orange { background-color: var(--orange); }
+.bg-gray { background-color: var(--gray); }
+.bg-pink { background-color: var(--pink); }
+.bg-magenta { background-color: var(--magenta); }
+
+.text-white { color: var(--white); }
+.text-light-blue { color: var(--light-blue); }
+.text-dark-blue { color: var(--dark-blue); }
+.text-black { color: var(--black); }
+.text-yellow { color: var(--yellow); }
+.text-orange { color: var(--orange); }
+.text-gray { color: var(--gray); }
+.text-pink { color: var(--pink); }
+.text-magenta { color: var(--magenta); }
+
+.wrap {
+    flex-wrap: wrap;
+}
+.gap5 {
+    gap: 5em;
+}
+
+.card {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5%;
+    border-radius: 25px;
+}
+
+.card img {
+    width: 85%;
+}
+
+.card__text {
+    display: flex;
+    width: 10ch;
+    word-break: break-all;
+    justify-content: center;
 }
 
 /* Inputs */
 
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    width: 100%;
+}
+
+.search input {
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    margin: 2%;
+    padding: 3%;
+    font-size: 1rem;
+    color: var(--black);
+    height: 75%;
+    width: 75%;
+}
+
+.search__button {
+    height: 75%;
+    width: 25%;
+}
 
 .forms {
     display: flex;

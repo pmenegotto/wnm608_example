@@ -10,44 +10,40 @@
     <?php include 'parts/navbar.php'; ?>
 
     <main>
-        <section>
-            <div class="section1__content">
-                <h1>Lorem ipsum dolor sit amet</h1>
-                <div class="section1__content__search">
+        <section class="bg-yellow">
+            <div class="content">
+                <h1>Welcome to the Cookie Shop</h1>
+                <div class="search">
                     <input type="search" id="search" name="search">
-                    <button class="btn section1__content__search__button">Search</button>
+                    <button class="btn search__button">Search</button>
                 </div>
             </div>
         </section>
-        <section class="section2">
-            <div class="section2__card card">
-            <img src="./img/image.png" alt="">
-                <div class="section2__card__text">
-                    <div class="section2__card__text">
-                        <h4>Lorem ipsum</h4>
-                        <br>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section2__card card">
-                <img src="./img/image.png" alt="">
-                <div class="section2__card__text">
-                    <div class="section2__card__text">
-                        <h4>Lorem ipsum</h4>
-                        <br>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section2__card card">
-                <img src="./img/image.png" alt="">
-                <div class="section2__card__text">
-                    <h4>Lorem ipsum</h4> 
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit tempora, illum velit ex dignissimos quas quidem ipsum enim impedit cupiditate, ad dolorem nihil, quam non optio voluptate adipisci consequuntur deserunt.</p>
-                </div>            
-            </div>
+        <section class="bg-light-blue gap5 wrap">
+            <?php
+            require_once 'lib/php/db.php';
+
+            // Consulta para buscar os produtos com ID 1, 2 e 3
+            $sql = "SELECT product_id, name, description, price, image_url FROM products WHERE product_id IN (1, 2, 3)";
+            $result = $conn->query($sql);
+            
+            if ($result->num_rows > 0) {
+                // Processar cada linha do resultado
+                while($row = $result->fetch_assoc()) {
+                    echo "<div class='section2__card card bg-white'>";
+                    echo "<img src='" . htmlspecialchars($row['image_url']). "' alt='" . htmlspecialchars($row["name"]). "'>";
+                    echo "<div class='section2__card__text'>";
+                    echo "<h4>" . htmlspecialchars($row["name"]). "</h4><br>";
+                    echo "<p>" . htmlspecialchars($row["description"]). "</p>";
+                    echo "</div>";
+                    echo "</div>";
+                }
+            } else {
+                echo "<p>Nenhum produto encontrado.</p>";
+            }
+            // Fechar a conexão apenas uma vez após o uso
+            $conn->close();
+            ?>
         </section>
     </main>
 

@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Test",
+        "email": "test@email.com",
+        "password": "pass123"
+    },
+    {
+        "name": "",
+        "email": "",
+        "password": ""
+    },
+    {
+        "name": "sssss",
+        "email": "",
+        "password": ""
+    },
+    {
+        "name": "",
+        "email": "test@email.com",
+        "password": ""
+    },
+    {
+        "name": "",
+        "email": "",
+        "password": "ssss"
+    },
+    {
+        "name": "",
+        "email": "",
+        "password": ""
+    },
+    {
+        "name": "",
+        "email": "",
+        "password": ""
+    },
+    {
+        "name": "",
+        "email": "",
+        "password": ""
+    },
+    {
+        "name": "ddddd",
+        "email": "",
+        "password": ""
+    },
+    {
+        "name": "",
+        "email": "",
+        "password": ""
+    },
+    {
+        "name": "James",
+        "email": "james@example.com",
+        "password": "123456"
+    }
+]

@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-<header>
+<header class="bg-dark-blue">
     <nav class="nav">
         <ul class="nav__links">
             <li><a href="index.php">Home</a></li>
