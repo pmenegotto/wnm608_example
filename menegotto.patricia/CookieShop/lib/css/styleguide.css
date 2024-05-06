@@ -59,7 +59,6 @@ h4 {
 p {
     font-size: 1rem;
     font-family: 'Abril Regular', Arial, Helvetica, sans-serif;
-    text-align: justify;
 }
 
 ul {
@@ -90,7 +89,22 @@ section {
     padding: 5%;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 50px;
+}
+
+thead th {
+    text-align: center;
+
+}
+
+tbody td {
+    text-align: center;
+
+}
+
+tfoot th {
+    text-align: center;
 }
 
 .bg-white { background-color: var(--white); }
@@ -120,13 +134,21 @@ section {
     gap: 5em;
 }
 
+.width100 {
+    width: 100%;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
 .card {
     width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    padding: 5%;
+    padding: 5% 2%;
     border-radius: 25px;
 }
 
@@ -136,8 +158,9 @@ section {
 
 .card__text {
     display: flex;
-    width: 10ch;
-    word-break: break-all;
+    margin: 5%;
+    width: 25ch;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -152,6 +175,17 @@ section {
 }
 
 .search input {
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    margin: 2%;
+    padding: 3%;
+    font-size: 1rem;
+    color: var(--black);
+    height: 75%;
+    width: 75%;
+}
+
+.search select {
     border: 2px solid var(--black);
     border-radius: 10px;
     margin: 2%;
@@ -197,8 +231,17 @@ section {
     font-size: 1.5rem;
 }
 
+.input-number {
+    border: 3px solid var(--black);
+    padding: 3%;
+    font-size: 1rem;
+    color: var(--black);
+    border-radius: 10px;
+    margin: 2%;
+    width: 20%;
+}
+
 .input-box {
-    background-color: var(--white);
     border: 3px solid var(--black);
     padding: 3%;
     font-size: 1rem;

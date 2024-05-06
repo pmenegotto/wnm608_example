@@ -13,22 +13,20 @@
         <section class="bg-yellow">
             <div class="content">
                 <h1>Welcome to the Cookie Shop</h1>
-                <div class="search">
+                <form class="search" action="products.php" method="GET">
                     <input type="search" id="search" name="search">
                     <button class="btn search__button">Search</button>
-                </div>
+                </form>
             </div>
         </section>
         <section class="bg-light-blue gap5 wrap">
             <?php
             require_once 'lib/php/db.php';
 
-            // Consulta para buscar os produtos com ID 1, 2 e 3
             $sql = "SELECT product_id, name, description, price, image_url FROM products WHERE product_id IN (1, 2, 3)";
             $result = $conn->query($sql);
             
             if ($result->num_rows > 0) {
-                // Processar cada linha do resultado
                 while($row = $result->fetch_assoc()) {
                     echo "<div class='section2__card card bg-white'>";
                     echo "<img src='" . htmlspecialchars($row['image_url']). "' alt='" . htmlspecialchars($row["name"]). "'>";

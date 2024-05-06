@@ -10,25 +10,38 @@
     <?php include 'parts/navbar.php'; ?>
 
     <main>
+        <section style="margin: 1%; padding: 0;">
+            <div class="content">
+                <form class="search" action="products.php" method="GET">
+                    <input type="search" id="search" name="search">
+                    <select name="sort">
+                        <option value="name_asc">Name (A-Z)</option>
+                        <option value="name_desc">Name (Z-A)</option>
+                        <option value="price_asc">Price (Low to High)</option>
+                        <option value="price_desc">Price (High to Low)</option>
+                    </select>
+                    <button class="btn search__button">Search</button>
+                </form>
+            </div>
+        </section>
         <section class="wrap gap5">
         <?php
-            require_once 'lib/php/db.php';
-
-            $sql = "SELECT product_id, name, description, price, image_url FROM products";
-            $result = $conn->query($sql);
+            require_once 'lib/php/search.php';
             
             if ($result->num_rows > 0) {
                 // Processar cada linha do resultado
                 while($row = $result->fetch_assoc()) {
-                    echo "<div class='card bg-pink'>";
-                    echo "<img src='" . htmlspecialchars($row['image_url']). "' alt='" . htmlspecialchars($row["name"]). "'>";
-                    echo "<div class='card__text'>";
-                    echo "<h4>" . htmlspecialchars($row["name"]). "</h4><br>";
-                    echo "<p>" . htmlspecialchars($row["description"]). "</p>";
-                    echo "<p>Price: $" . htmlspecialchars(number_format($row['price'], 2, ',', '.')) . "</p><br><br>";
-                    echo '<a class="btn" href="product-page.php?id=' . $row['product_id'] . '">View More</a>';
-                    echo "</div>";
-                    echo "</div>";
+                    ?>
+                    <div class='card bg-pink'>
+                        <img src="<?php echo htmlspecialchars($row['image_url'])?>" alt="<?php htmlspecialchars($row["name"]) ?>">
+                        <div class='card__text'>
+                            <h4><?php echo htmlspecialchars($row["name"]) ?></h4><br>
+                            <p><?php echo htmlspecialchars($row["description"]) ?></p>
+                            <p>Price: $<?php echo htmlspecialchars(number_format($row['price'], 2, ',', '.')) ?></p><br><br>
+                        </div>
+                        <a class="btn" href="product-page.php?id=<?php echo $row['product_id'] ?>">View More</a>
+                    </div>
+                    <?php
                 }
             } else {
                 echo "<p>Nenhum produto encontrado.</p>";
