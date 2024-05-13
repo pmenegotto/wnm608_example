@@ -21,7 +21,7 @@
                 <br>
                 <a class="btn" href="register.php">Register here</a>
                 <br>
-                <a class="btn" href="admin-page.php">Admin Page</a>
+                <a class="btn" href="admin-products.php">Admin Page</a>
             </div>
         </section>
     </main>

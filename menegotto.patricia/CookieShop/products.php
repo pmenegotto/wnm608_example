@@ -25,28 +25,25 @@
             </div>
         </section>
         <section class="wrap gap5">
-        <?php
-            require_once 'lib/php/search.php';
-            
-            if ($result->num_rows > 0) {
-                // Processar cada linha do resultado
-                while($row = $result->fetch_assoc()) {
-                    ?>
-                    <div class='card bg-pink'>
-                        <img src="<?php echo htmlspecialchars($row['image_url'])?>" alt="<?php htmlspecialchars($row["name"]) ?>">
-                        <div class='card__text'>
-                            <h4><?php echo htmlspecialchars($row["name"]) ?></h4><br>
-                            <p><?php echo htmlspecialchars($row["description"]) ?></p>
-                            <p>Price: $<?php echo htmlspecialchars(number_format($row['price'], 2, ',', '.')) ?></p><br><br>
+            <?php
+                require_once 'lib/php/search.php';
+
+                if ($result->num_rows > 0) {
+                    // Processar cada linha do resultado
+                    while($row = $result->fetch_assoc()) {
+                        ?>
+                        <div class='card bg-pink'>
+                            <img src="<?php echo htmlspecialchars($row['image_url'])?>" alt="<?php htmlspecialchars($row["name"]) ?>">
+                            <div class='card__text'>
+                                <h4><?php echo htmlspecialchars($row["name"]) ?></h4><br>
+                                <p><?php echo htmlspecialchars($row["description"]) ?></p>
+                                <p>Price: $<?php echo htmlspecialchars(number_format($row['price'], 2, ',', '.')) ?></p><br><br>
+                            </div>
+                            <a class="btn" href="product-page.php?id=<?php echo $row['product_id'] ?>">View More</a>
                         </div>
-                        <a class="btn" href="product-page.php?id=<?php echo $row['product_id'] ?>">View More</a>
-                    </div>
-                    <?php
+                        <?php
+                    }
                 }
-            } else {
-                echo "<p>Nenhum produto encontrado.</p>";
-            }
-            $conn->close();
             ?>
         </section>
     </main>
@@ -54,4 +51,3 @@
     <?php include 'parts/footer.php'; ?>
 </body>
 </html>
-

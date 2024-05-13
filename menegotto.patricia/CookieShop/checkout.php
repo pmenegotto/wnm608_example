@@ -50,12 +50,10 @@
                             </thead>
                             <tbody>
                             <?php
-                                session_start(); // Inicia a sessão para acessar as variáveis de sessão
-    
-                                require_once 'lib/php/db.php'; // Certifique-se de que o caminho para o arquivo de conexão está correto
-    
+                                session_start();
+                                require_once 'lib/php/db.php';
                                 if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
-                                    echo "<p>Seu carrinho está vazio!</p>";
+                                    echo "<p>Your cart is empty!</p>";
                                 } else {
                                     echo "<table>
                                             <thead>
@@ -101,7 +99,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th colspan="3">Total Geral:</th>
+                                    <th colspan="3">Total:</th>
                                     <th>$<?php echo number_format($total, 2); ?></th>
                                 </tr>
                             </tfoot>
@@ -109,7 +107,7 @@
                             
                     </section>
                             
-                    <button type="submit" class="btn">Confirmar Pedido</button>
+                    <button type="submit" class="btn">Next</button>
                 </form>
             </div>
         </section>

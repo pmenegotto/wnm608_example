@@ -160,6 +160,7 @@ tfoot th {
     display: flex;
     margin: 5%;
     width: 25ch;
+    height: 15ch;
     flex-direction: column;
     justify-content: center;
 }
